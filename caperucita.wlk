@@ -17,8 +17,9 @@ object canasta {
       cantManzanas = cantManzanas + cantidad
     }
     method descargarManzanas(cantidad) {
-      cantManzanas = cantManzanas - cantidad
+      cantManzanas = (cantManzanas - cantidad).max(0)
     }
+    
 
 }
 object abuelita {
