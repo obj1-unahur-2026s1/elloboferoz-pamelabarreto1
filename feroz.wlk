@@ -2,9 +2,8 @@ object feroz {
     var estaVivo = true
     var peso=self.pesoInicial()
 
-  method estaSaludable() {
-    peso.between(20, 150)
-  }
+  method estaSaludable() = peso.between(20, 150)
+  
 
   method cambiarDePeso(pesoNuevo) {
     peso = pesoNuevo
@@ -14,14 +13,14 @@ object feroz {
 method pesoInicial() =10
 
   method sufrirCrisis() {
-    peso=self.pesoInicial()
+    peso=self.pesoInicial()              //peso=10
   }
 
   method comer(algo) {
     peso = (algo.peso() * 0.1) + peso
   }
 method correr() {
-  peso=peso-1
+  peso=(peso-1).max(0)
 }
 method estaVivo() =estaVivo
  method estaMuerto() {
